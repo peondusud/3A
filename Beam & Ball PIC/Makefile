@@ -1,0 +1,19 @@
+# MPLAB IDE generated this makefile for use with GNU make.
+# Project: gest_time.mcp
+# Date: Tue Jun 07 14:58:03 2011
+
+AS = MPASMWIN.exe
+CC = mcc18.exe
+LD = mplink.exe
+AR = mplib.exe
+RM = rm
+
+gest_time.cof : gestiondutimer.o
+	$(LD) /p18F4520 /l"C:\MCC18\lib" "18f4520i.lkr" "gestiondutimer.o" "C:\Documents and Settings\Administrateur\Bureau\PSI2\xlcdV.lib" /u_CRUNTIME /u_DEBUG /u_DEBUGCODESTART=0x7dc0 /u_DEBUGCODELEN=0x240 /u_DEBUGDATASTART=0x5f4 /u_DEBUGDATALEN=0xc /z__MPLAB_BUILD=1 /z__MPLAB_DEBUG=1 /z__MPLAB_DEBUGGER_ICD2=1 /z__ICD2RAM=1 /o"gest_time.cof" /M"gest_time.map" /W
+
+gestiondutimer.o : gestiondutimer.c ../../../../Program\ Files/Microchip/mplabc18/v3.37.01/h/timers.h ../../../../Program\ Files/Microchip/mplabc18/v3.37.01/h/math.h ../../../../Program\ Files/Microchip/mplabc18/v3.37.01/h/stdio.h ../../../../Program\ Files/Microchip/mplabc18/v3.37.01/h/stdlib.h ../../../../Program\ Files/Microchip/mplabc18/v3.37.01/h/string.h ../../../../Program\ Files/Microchip/mplabc18/v3.37.01/h/usart.h ../../../../Program\ Files/Microchip/mplabc18/v3.37.01/h/adc.h xlcdV.h gestiondutimer.c ../../../../Program\ Files/Microchip/mplabc18/v3.37.01/h/p18f4520.h ../../../../Program\ Files/Microchip/mplabc18/v3.37.01/h/pconfig.h ../../../../Program\ Files/Microchip/mplabc18/v3.37.01/h/p18cxxx.h ../../../../Program\ Files/Microchip/mplabc18/v3.37.01/h/stdarg.h ../../../../Program\ Files/Microchip/mplabc18/v3.37.01/h/stddef.h MesIncludes.h
+	$(CC) -p=18F4520 "gestiondutimer.c" -fo="gestiondutimer.o" -D__DEBUG -D__MPLAB_DEBUGGER_ICD2=1 -Ou- -Ot- -Ob- -Op- -Or- -Od- -Opa-
+
+clean : 
+	$(RM) "gestiondutimer.o" "gest_time.cof" "gest_time.hex"
+
